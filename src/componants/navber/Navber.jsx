@@ -1,13 +1,33 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navber = () => {
 
+
+    const { user, signOutUser } = useContext(AuthContext);
+
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     const navLink = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/touristSpot'> All Tourists Spot</NavLink></li>
-        <li><NavLink to='/addTourist'> Add Tourists Spot</NavLink></li>
-        <li><NavLink to='/myList'>My List</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to='/addTourist'> Add Tourists Spot</NavLink></li>
+                <li><NavLink to='/myList'>My List</NavLink></li>
+            </>
+        }
     </>
 
     return (
@@ -29,7 +49,19 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn"><Link to='/login'>Login</Link></a>
+                {user ? (
+                    <div tabIndex={0} role="button" className=" btn-circle avatar tooltip tooltip-bottom" data-tip={user?.displayName || 'User name not found'}>
+                        <div className="w-10 rounded-full border">
+                            <img className="profile-img" alt="Profile" src={user.photoURL} />
+                        </div>
+                    </div>) : null
+                }
+                {
+                    user ?
+                        <button onClick={handleSignOut} className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#7AA93C] text-white">Log Out</button>
+                        :
+                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#7AA93C] text-white">Login</button></Link>
+                }
             </div>
         </div>
     );

@@ -14,15 +14,23 @@ import AllTouristSpot from './componants/allTouristSpot/AllTouristSpot.jsx';
 import AddTourist from './componants/addTourist/AddTourist.jsx';
 import MyList from './componants/myList/MyList.jsx';
 import AuthProvider from './componants/Provider/AuthProvider.jsx';
+import PrivateRoute from './componants/privateRoute/PrivateRoute.jsx';
+import NotFoundPage from './componants/NotFound/NotFoundPage.jsx';
+import TouristSpots from './componants/touristSpots/TouristSpots.jsx';
 
 const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <NotFoundPage></NotFoundPage>
+  },
   {
     path: "/",
     element: <Root></Root>,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
       {
         path: '/login',
@@ -38,11 +46,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/addTourist',
-        element: <AddTourist></AddTourist>
+        element: <PrivateRoute><AddTourist></AddTourist></PrivateRoute>
       },
       {
         path: '/myList',
-        element: <MyList></MyList>
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>
+      },
+      {
+        path: '/touristSpots',
+        element: <TouristSpots></TouristSpots>,
       }
     ]
   },
