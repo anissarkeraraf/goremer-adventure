@@ -1,14 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const {
@@ -91,20 +93,20 @@ const Register = () => {
                             />
                         </div>
                         <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-
                             <div className="flex relative">
                                 <input
-                                    // type={showPassword ? "text" : "password"}
+                                    type={showPassword ? "text" : "password"}
                                     name="password"
                                     placeholder="password"
                                     className="input input-bordered w-full"
                                     required
                                     {...register("password", { required: true })}
                                 />
-                               
+                                <span className="absolute left-72 top-4" onClick={() => setShowPassword(!showPassword)}>
+                                    {
+                                        showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                    }
+                                </span>
                             </div>
 
                             <label className="label">
