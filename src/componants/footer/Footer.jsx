@@ -15,6 +15,7 @@ const Footer = () => {
                         <span>Message</span>
                     </label>
                     <textarea placeholder="Enter your message" className="textarea textarea-bordered textarea-md w-full md:max-w-xs h-32" ></textarea>
+                    <button className="p-3 text-white rounded-lg w-full md:max-w-xs mt-5 bg-[#7AA93C]">Message</button>
                 </div>
                 <div className="grid grid-cols-2 gap-32">
                     <div className="">

@@ -1,3 +1,4 @@
+import { IoIosArrowDown } from "react-icons/io";
 import Swal from "sweetalert2";
 
 
@@ -96,13 +97,23 @@ const AddTourist = () => {
                             <input type="text" name="average" placeholder="Average Cost" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="md:w-1/2 ml-4">
+                    <div className=" md:w-1/2 ml-4">
                         <label className="form-control">
                             <div className="label">
                                 <span className="label-text">Seasonality :</span>
                             </div>
-                            <input type="text" name="seasonality" placeholder="Seasonality" className="input input-bordered w-full" />
                         </label>
+                        <select name="seasonality" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
+                            <option selected>Choose your favorite season</option>
+                            <option value="summer">Summer</option>
+                            <option value="rainy-season">The rainy-season</option>
+                            <option value="autumn">The autumn</option>
+                            <option value="late-autumn">Late-autumn</option>
+                            <option value="winter">Winter</option>
+                            <option value="spring">Spring</option>
+
+                        </select>
+                        
                     </div>
                 </div>
                 <div className="flex mb-8">
@@ -150,7 +161,7 @@ const AddTourist = () => {
                         <input type="text" name="photoURL" placeholder="PhotoURL" className="input input-bordered w-full" />
                     </label>
                 </div>
-                <input type="submit" value="Add Spots" className="btn bg-[#7AA93C] w-full" />
+                <input type="submit" value="Add Spots" className="p-3 text-white rounded-lg bg-[#7AA93C] w-full" />
             </form>
         </div>
     );

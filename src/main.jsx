@@ -16,7 +16,6 @@ import MyList from './componants/myList/MyList.jsx';
 import AuthProvider from './componants/Provider/AuthProvider.jsx';
 import PrivateRoute from './componants/privateRoute/PrivateRoute.jsx';
 import NotFoundPage from './componants/NotFound/NotFoundPage.jsx';
-import TouristSpots from './componants/touristSpots/TouristSpots.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,10 +51,6 @@ const router = createBrowserRouter([
         path: '/myList',
         element: <PrivateRoute><MyList></MyList></PrivateRoute>
       },
-      {
-        path: '/touristSpots',
-        element: <TouristSpots></TouristSpots>,
-      }
     ]
   },
 ]);
