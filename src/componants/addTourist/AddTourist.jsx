@@ -39,6 +39,7 @@ const AddTourist = () => {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    form.reset();
                 }
             })
 
@@ -64,8 +65,17 @@ const AddTourist = () => {
                             <div className="label">
                                 <span className="label-text">Country Name :</span>
                             </div>
-                            <input type="text" name="countryName" placeholder="Country Name" className="input input-bordered w-full" />
                         </label>
+                        <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
+                            <option selected>Select Country</option>
+                            <option value="summer">Bangladesh</option>
+                            <option value="rainy-season">Thiland</option>
+                            <option value="autumn">Indonesia</option>
+                            <option value="late-autumn">Malaysia</option>
+                            <option value="winter">Vietnam</option>
+                            <option value="spring">Combodia</option>
+
+                        </select>
                     </div>
                 </div>
                 {/* form Supplier and Taste row */}
@@ -106,14 +116,14 @@ const AddTourist = () => {
                         <select name="seasonality" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
                             <option selected>Choose your favorite season</option>
                             <option value="summer">Summer</option>
-                            <option value="rainy-season">The rainy-season</option>
-                            <option value="autumn">The autumn</option>
+                            <option value="rainy-season">Rainy Season</option>
+                            <option value="autumn">Autumn</option>
                             <option value="late-autumn">Late-autumn</option>
                             <option value="winter">Winter</option>
                             <option value="spring">Spring</option>
 
                         </select>
-                        
+
                     </div>
                 </div>
                 <div className="flex mb-8">
