@@ -16,6 +16,8 @@ import MyList from './componants/myList/MyList.jsx';
 import AuthProvider from './componants/Provider/AuthProvider.jsx';
 import PrivateRoute from './componants/privateRoute/PrivateRoute.jsx';
 import NotFoundPage from './componants/NotFound/NotFoundPage.jsx';
+import Details from './componants/details/Details.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,11 @@ const router = createBrowserRouter([
         path: '/myList',
         element: <PrivateRoute><MyList></MyList></PrivateRoute>
       },
+      {
+        path: '/spot/:id',
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/spot')
+      }
     ]
   },
 ]);
@@ -59,7 +66,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

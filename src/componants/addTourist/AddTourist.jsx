@@ -1,5 +1,6 @@
 import { IoIosArrowDown } from "react-icons/io";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet-async';
 
 
 const AddTourist = () => {
@@ -47,132 +48,138 @@ const AddTourist = () => {
 
 
     return (
-        <div className="bg-[#F4F3F0] p-24 mb-20">
-            <h2 className="text-3xl font-extrabold text-center pb-5">Add your tourist spots</h2>
-            <form onSubmit={handleAddTouristSpot}>
-                {/* form name and quantity row */}
-                <div className="flex mb-8">
-                    <div className="md:w-1/2">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Tourists Spot Name :</span>
-                            </div>
-                            <input type="text" name="spotName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="md:w-1/2 ml-4">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Country Name :</span>
-                            </div>
-                        </label>
-                        <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
-                            <option selected>Select Country</option>
-                            <option value="summer">Bangladesh</option>
-                            <option value="rainy-season">Thiland</option>
-                            <option value="autumn">Indonesia</option>
-                            <option value="late-autumn">Malaysia</option>
-                            <option value="winter">Vietnam</option>
-                            <option value="spring">Combodia</option>
-
-                        </select>
-                    </div>
-                </div>
-                {/* form Supplier and Taste row */}
-                <div className="flex mb-8">
-                    <div className="md:w-1/2">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Location :</span>
-                            </div>
-                            <input type="text" name="location" placeholder="Location" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="md:w-1/2 ml-4">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Short Description :</span>
-                            </div>
-                            <input type="text" name="description" placeholder="Short Description" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-                {/* form category and details row */}
-                <div className="flex mb-8">
-                    <div className="md:w-1/2">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Average Cost :</span>
-                            </div>
-                            <input type="text" name="average" placeholder="Average Cost" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className=" md:w-1/2 ml-4">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text">Seasonality :</span>
-                            </div>
-                        </label>
-                        <select name="seasonality" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
-                            <option selected>Choose your favorite season</option>
-                            <option value="summer">Summer</option>
-                            <option value="rainy-season">Rainy Season</option>
-                            <option value="autumn">Autumn</option>
-                            <option value="late-autumn">Late-autumn</option>
-                            <option value="winter">Winter</option>
-                            <option value="spring">Spring</option>
-
-                        </select>
-
-                    </div>
-                </div>
-                <div className="flex mb-8">
-                    <div className="md:w-1/2">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text"> Travel Time :</span>
-                            </div>
-                            <input type="text" name="travel" placeholder="Travel Time" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="md:w-1/2 ml-4">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text"> Total visitors per year :</span>
-                            </div>
-                            <input type="text" name="totalVisitors" placeholder="Total Visitors per year" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-                <div className="flex mb-8">
-                    <div className="md:w-1/2">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text"> User email :</span>
-                            </div>
-                            <input type="text" name="email" placeholder="User email" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="md:w-1/2 ml-4">
-                        <label className="form-control">
-                            <div className="label">
-                                <span className="label-text"> User name :</span>
-                            </div>
-                            <input type="text" name="name" placeholder="User name" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-
-                <div className="w-full mb-8">
-                    <label className="form-control">
-                        <div className="label">
-                            <span className="label-text">PhotoURL :</span>
+        <div>
+            <Helmet>
+                <title>Add Touris Spot | GoromerAdventure</title>
+            </Helmet>
+            <div className="bg-[#F4F3F0] p-24 mb-20">
+                <h2 className="text-3xl font-extrabold text-center pb-5">Add your tourist spots</h2>
+                <form onSubmit={handleAddTouristSpot}>
+                    {/* form name and quantity row */}
+                    <div className="flex mb-8">
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Tourists Spot Name :</span>
+                                </div>
+                                <input type="text" name="spotName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
+                            </label>
                         </div>
-                        <input type="text" name="photoURL" placeholder="PhotoURL" className="input input-bordered w-full" />
-                    </label>
-                </div>
-                <input type="submit" value="Add Spots" className="p-3 text-white rounded-lg bg-[#7AA93C] w-full" />
-            </form>
+                        <div className="md:w-1/2 ml-4">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Country Name :</span>
+                                </div>
+                            </label>
+                            <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
+                                <option selected>Select Country</option>
+                                <option value="summer">Bangladesh</option>
+                                <option value="rainy-season">Thiland</option>
+                                <option value="autumn">Indonesia</option>
+                                <option value="late-autumn">Malaysia</option>
+                                <option value="winter">Vietnam</option>
+                                <option value="spring">Combodia</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    {/* form Supplier and Taste row */}
+                    <div className="flex mb-8">
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Location :</span>
+                                </div>
+                                <input type="text" name="location" placeholder="Location" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="md:w-1/2 ml-4">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Short Description :</span>
+                                </div>
+                                <input type="text" name="description" placeholder="Short Description" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                    </div>
+                    {/* form category and details row */}
+                    <div className="flex mb-8">
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Average Cost :</span>
+                                </div>
+                                <input type="text" name="average" placeholder="Average Cost" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className=" md:w-1/2 ml-4">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Seasonality :</span>
+                                </div>
+                            </label>
+                            <select name="seasonality" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
+                                <option selected>Choose your favorite season</option>
+                                <option value="summer">Summer</option>
+                                <option value="rainy-season">Rainy Season</option>
+                                <option value="autumn">Autumn</option>
+                                <option value="late-autumn">Late-autumn</option>
+                                <option value="winter">Winter</option>
+                                <option value="spring">Spring</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div className="flex mb-8">
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text"> Travel Time :</span>
+                                </div>
+                                <input type="text" name="travel" placeholder="Travel Time" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="md:w-1/2 ml-4">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text"> Total visitors per year :</span>
+                                </div>
+                                <input type="text" name="totalVisitors" placeholder="Total Visitors per year" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="w-full mb-8">
+                        <label className="form-control">
+                            <div className="label">
+                                <span className="label-text">PhotoURL :</span>
+                            </div>
+                            <input type="text" name="photoURL" placeholder="PhotoURL" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+
+                    <div className="flex mb-8">
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text"> User email :</span>
+                                </div>
+                                <input type="text" name="email" placeholder="User email" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="md:w-1/2 ml-4">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text"> User name :</span>
+                                </div>
+                                <input type="text" name="name" placeholder="User name" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Add Spots" className="p-3 text-white rounded-lg bg-[#7AA93C] w-full" />
+                </form>
+            </div>
         </div>
     );
 };

@@ -1,11 +1,12 @@
 import { FaEye } from "react-icons/fa";
 import { GrUpdate } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
+import { Link, NavLink } from "react-router-dom";
 
 
-const TourSpots = ({ tour }) => {
+const TourSpots = ({ spot }) => {
 
-    const { spotName, countryName, location, description, average, seasonality, travel, totalVisitors, email, userName, photoURL } = tour;
+    const { spotName, _id, countryName, location, description, average, seasonality, travel, totalVisitors, email, userName, photoURL } = spot;
 
 
     return (
@@ -21,9 +22,9 @@ const TourSpots = ({ tour }) => {
                 </div>
 
                 <div className="flex justify-between mt-5">
-                    <button className="bg-[#BB792A] p-3 rounded-full text-white">View Details</button>
-                    <button className="bg-[#BB792A] px-3 rounded-full text-white">Update</button>
-                    <button className="bg-[#BB792A] px-3 rounded-full text-white">Delete</button>
+                    <NavLink  to={`/spot/${_id}`}>
+                        <button className="btn-outline bg-[#33b249] w-full hover:bg-[#5adbb5] hover:text-black duration-500 p-3 rounded text-white">View Details</button>
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -58,9 +58,9 @@ const Navber = () => {
                 }
                 {
                     user ?
-                        <button onClick={handleSignOut} className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#7AA93C] text-white">Log Out</button>
+                        <button onClick={handleSignOut} className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Log Out</button>
                         :
-                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#7AA93C] text-white">Login</button></Link>
+                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Login</button></Link>
                 }
             </div>
         </div>
