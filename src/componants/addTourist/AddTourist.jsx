@@ -1,9 +1,14 @@
 import { IoIosArrowDown } from "react-icons/io";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const AddTourist = () => {
+
+    const {user} = useContext(AuthContext);
+    console.log(user)
 
     const handleAddTouristSpot = e => {
         e.preventDefault();
@@ -57,15 +62,7 @@ const AddTourist = () => {
                 <form onSubmit={handleAddTouristSpot}>
                     {/* form name and quantity row */}
                     <div className="flex mb-8">
-                        <div className="md:w-1/2">
-                            <label className="form-control">
-                                <div className="label">
-                                    <span className="label-text">Tourists Spot Name :</span>
-                                </div>
-                                <input type="text" name="spotName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
-                            </label>
-                        </div>
-                        <div className="md:w-1/2 ml-4">
+                    <div className="md:w-1/2 mr-4">
                             <label className="form-control">
                                 <div className="label">
                                     <span className="label-text">Country Name :</span>
@@ -82,6 +79,16 @@ const AddTourist = () => {
 
                             </select>
                         </div>
+
+                        <div className="md:w-1/2">
+                            <label className="form-control">
+                                <div className="label">
+                                    <span className="label-text">Tourists Spot Name :</span>
+                                </div>
+                                <input type="text" name="spotName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        
                     </div>
                     {/* form Supplier and Taste row */}
                     <div className="flex mb-8">
@@ -165,7 +172,7 @@ const AddTourist = () => {
                                 <div className="label">
                                     <span className="label-text"> User email :</span>
                                 </div>
-                                <input type="text" name="email" placeholder="User email" className="input input-bordered w-full" />
+                                <input type="text" name="email" defaultValue={user.email} placeholder="User email" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="md:w-1/2 ml-4">
@@ -173,7 +180,7 @@ const AddTourist = () => {
                                 <div className="label">
                                     <span className="label-text"> User name :</span>
                                 </div>
-                                <input type="text" name="name" placeholder="User name" className="input input-bordered w-full" />
+                                <input type="text" name="name" defaultValue={user.displayName} placeholder="User name" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>

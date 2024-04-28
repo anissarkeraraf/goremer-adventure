@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -41,8 +42,32 @@ const Register = () => {
 
             .then((result) => {
                 console.log(result)
-                reset();
-                navigate('/');
+
+                // new user has been created
+                const user = { email }
+                fetch('http://localhost:5000/user', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: "Added the user!",
+                                text: "User has been added.",
+                                icon: "success"
+                            });
+                            reset();
+                            navigate('/');
+                        }
+                    })
+
+
+
             })
 
             .catch(error => {

@@ -22,9 +22,9 @@ const TourSpots = ({ spot }) => {
                 </div>
 
                 <div className="flex justify-between mt-5">
-                    <NavLink  to={`/spot/${_id}`}>
-                        <button className="btn-outline bg-[#33b249] w-full hover:bg-[#5adbb5] hover:text-black duration-500 p-3 rounded text-white">View Details</button>
-                    </NavLink>
+                    <Link  to={`/spot/${_id}`} className="btn-outline bg-[#33b249] w-full hover:bg-[#5adbb5] hover:text-black duration-500 p-3 rounded text-white">
+                       <span className="pl-[100px]"> View Details</span>
+                    </Link>
                 </div>
             </div>
         </div>
