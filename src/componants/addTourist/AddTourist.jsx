@@ -9,6 +9,7 @@ const AddTourist = () => {
 
     const {user} = useContext(AuthContext);
     console.log(user)
+    
 
     const handleAddTouristSpot = e => {
         e.preventDefault();
@@ -70,12 +71,12 @@ const AddTourist = () => {
                             </label>
                             <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
                                 <option selected>Select Country</option>
-                                <option value="summer">Bangladesh</option>
-                                <option value="rainy-season">Thiland</option>
-                                <option value="autumn">Indonesia</option>
-                                <option value="late-autumn">Malaysia</option>
-                                <option value="winter">Vietnam</option>
-                                <option value="spring">Combodia</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Thiland">Thiland</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Combodia">Combodia</option>
 
                             </select>
                         </div>

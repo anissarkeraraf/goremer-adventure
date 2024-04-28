@@ -18,6 +18,7 @@ import PrivateRoute from './componants/privateRoute/PrivateRoute.jsx';
 import NotFoundPage from './componants/NotFound/NotFoundPage.jsx';
 import Details from './componants/details/Details.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import Update from './componants/Update/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
         path: '/spot/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/spot')
+      },
+      {
+        path: '/update/:id',
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
       }
     ]
   },

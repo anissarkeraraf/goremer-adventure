@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
@@ -7,16 +7,16 @@ const MyList = () => {
 
 
     const { user } = useContext(AuthContext);
-    // console.log(user.email)
+    console.log(user.email)
 
-    const [items, setItems] = useState([])
+    const [values, setValues] = useState([])
 
 
     useEffect(() => {
         fetch(`http://localhost:5000/spot/${user.email}`)
             .then(res => res.json())
             .then(data => {
-                setItems(data)
+                setValues(data)
             })
     }, [user])
 
@@ -40,7 +40,7 @@ const MyList = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        {items.map((item, index) => (
+                        {values.map((item, index) => (
                             <tr key={item._id}>
                                 <th>{index + 1}</th>
                                 <td>{item.spotName}</td>
@@ -48,7 +48,7 @@ const MyList = () => {
                                 <td>{item.location}</td>
                                 <td>{item.average} /<small>$</small></td>
                                 <td>
-                                    <button className="bg-[#33B249] mr-2 text-white rounded p-1">Update</button>
+                                   <Link to={`/update/${item._id}`}> <button className="bg-[#33B249] mr-2 text-white rounded p-1">Update</button></Link>
                                     <button className="bg-[#33B249] text-white rounded p-1">Delete</button>
                                 </td>
                             </tr>
