@@ -35,16 +35,17 @@ const Home = () => {
             </div>
             <div className="my-20 divide-y-2 m-10">
                 <div>
-                    <h2 className="text-4xl font-medium text-center mb-5">DESTINATION</h2>
+                    <p className="text-center">Take yourself</p>
+                    <h2 className="text-4xl font-medium text-center mb-5">Adventure Ideas</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     {adventure.map(ad => (
-                        <div className="card card-compact bg-base-100 shadow-xl">
-                            <figure><img src={ad.imgUrl} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
+                        <div className=" mt-20 mx-auto">
+                           <img className="w-[200px] h-[200px] rounded-full" src={ad.imgUrl} alt="Shoes" />
+                            <div className=" text-center">
+                                <h2 className="text-center text-2xl font-bold mt-5">{ad.name}</h2>
+                                <p className="w-[200px] mx-auto mt-5">{ad.description}</p>
+                                <div className="mt-5 justify-center">
                                     <button className="btn btn-primary">Buy Now</button>
                                 </div>
                             </div>
