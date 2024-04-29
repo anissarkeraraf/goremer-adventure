@@ -11,7 +11,7 @@ const Home = () => {
     const [adventure, setAdventure] = useState([]);
 
     useEffect(() => {
-        fetch('/public/adventure.json')
+        fetch('/adventure.json')
             .then(res => res.json())
             .then(data => {
                 setAdventure(data)

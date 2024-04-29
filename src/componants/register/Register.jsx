@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -62,9 +63,9 @@ const Register = () => {
 
     return (
         <div>
-            {/* <Helmet>
+            <Helmet>
                 <title>Register | Home Idings</title>
-            </Helmet> */}
+            </Helmet>
             <div className="hero min-h-screen">
 
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

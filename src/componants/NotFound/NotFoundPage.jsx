@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 const NotFoundPage = () => {
     return (
         <div class="text-center mt-44">
+            <Helmet>
+                <title>404</title>
+            </Helmet>
             <h1 class="mb-4 text-6xl font-semibold text-red-500">404</h1>
             <p class="mb-4 text-lg text-gray-600">Oops! Looks like you're lost.</p>
             <div class="animate-bounce">

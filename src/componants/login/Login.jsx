@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -65,6 +66,9 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen">
+            <Helmet>
+                <title>Login | GoromerAdventure</title>
+            </Helmet>
             <div className="hero-content flex-col md:w-1/2">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Please Login!</h1>
