@@ -1,0 +1,22 @@
+[
+    {
+        "imgUrl": "https://adventor.wpengine.com/wp-content/uploads/2021/08/home-adventure-idea-01.jpg",
+        "name": "Zip Lines",
+        "description": "Add some adrenalin to your travel senses by zipline travel.",
+    },
+    {
+        "imgUrl": "https://adventor.wpengine.com/wp-content/uploads/2021/07/image-caption-2.jpg",
+        "name": "Kayaking",
+        "description": "Kayaking makes takes thrill to the next level.",
+    },
+    {
+        "imgUrl": "https://adventor.wpengine.com/wp-content/uploads/2021/07/image-caption-3.jpg",
+        "name": "Bungee Jump",
+        "description": "Bungee jumps is one of the most exhilarating adventure.",
+    },
+    {
+        "imgUrl": "https://i.ibb.co/Sy2KWfh/OT-blog-solo-canoeing-tips-1.jpg",
+        "name": "Canoeing",
+        "description": "Just sail in the calm waters of the sea with complete safety.",
+    }
+]
