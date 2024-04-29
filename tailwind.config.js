@@ -10,6 +10,7 @@ export default {
         mansalva: "'Mansalva', sans-serif",
         roboto: "'Roboto', sans-serif",
         playfair: "'Playfair Display', serif",
+        satisfy: "'Satisfy', cursive"
       }
     },
   },

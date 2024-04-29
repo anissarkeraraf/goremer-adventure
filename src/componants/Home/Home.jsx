@@ -20,7 +20,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className="mb-10">
             <Header></Header>
             <div className="w-11/12 mx-auto">
                 <div className=" my-10">
@@ -54,8 +54,60 @@ const Home = () => {
                 </div>
             </div>
             <div className="bg-[#FFF5F1]">
-                <p className="font-mansalva">Most wanted Q & A</p>
-                <h2>Frequently Asked Questions</h2>
+                <div className="text-center pt-20">
+                    <p className="font-satisfy text-[#EA604C] text-3xl pb-4">Most wanted Q & A</p>
+                    <h2 className="font-roboto text-4xl lg:text-5xl">Frequently Asked Questions</h2>
+                </div>
+                <div className="lg:w-10/12 mx-auto p-4 lg:p-10">
+                    <div>
+                        <div className="collapse bg-[#FFFFFF] mb-4">
+                            <input type="radio" name="my-accordion-1" defaultChecked />
+                            <div className="collapse-title text-xl font-medium font-playfair">
+                                01. What are the best locations for wedding tours?
+                            </div>
+                            <div className="collapse-content font-playfair">
+                                <p>Known for its stunning beaches, lush landscapes, and vibrant culture, Bali offers a tropical paradise for couples seeking a destination wedding surrounded by natural beauty and exotic charm.</p>
+                            </div>
+                        </div>
+                        <div className="collapse bg-[#FFFFFF] mb-4">
+                            <input type="radio" name="my-accordion-1" />
+                            <div className="collapse-title text-xl font-medium font-playfair">
+                                02. Do you offer international packages?
+                            </div>
+                            <div className="collapse-content font-playfair">
+                                <p>Yes, we provide our customers with different offers for different countries.  Especially for our regular customers there is always a package for this.  But don't worry, if you are the first to join our service, there will be a special discount for you.  And every year there is an offer</p>
+                            </div>
+                        </div>
+                        <div className="collapse bg-[#FFFFFF] mb-4">
+                            <input type="radio" name="my-accordion-1" />
+                            <div className="collapse-title text-xl font-medium font-playfair">
+                                03. Can we customize your package with you?
+                            </div>
+                            <div className="collapse-content font-playfair">
+                                <p>Yes, we allow customers to do this.  Customers can select the package of their choice and customize it again if they want, but they can't do it more than once.</p>
+                            </div>
+                        </div>
+                        <div className="collapse bg-[#FFFFFF] mb-4">
+                            <input type="radio" name="my-accordion-1" defaultChecked />
+                            <div className="collapse-title text-xl font-medium font-playfair">
+                                04. Why would we book our package?
+                            </div>
+                            <div className="collapse-content font-playfair">
+                                <p>The advantages of package tours are that they are convenient. You don’t have to trouble yourself much about anything after signing up and paying for one, just get yourself to the airport on time and when you get off the plain keep an eye out for someone with a sign with your name on it.</p>
+                            </div>
+                        </div>
+                        <div className="collapse bg-[#FFFFFF]">
+                            <input type="radio" name="my-accordion-1" defaultChecked />
+                            <div className="collapse-title text-xl font-medium font-playfair">
+                                05. What’s it like your job, grab a backpack?
+                            </div>
+                            <div className="collapse-content font-playfair">
+                                <p>You'll want to carry all your stuff in a professional (a.k.a., not flashy or inappropriate) backpack or briefcase—or, if you just have your resume, a folder or padfolio. The last thing you want is to be scrounging through your pockets for a pen or handing the hiring manager a crumpled-up resume.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
