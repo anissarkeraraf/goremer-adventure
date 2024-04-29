@@ -7,9 +7,9 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const AddTourist = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     console.log(user)
-    
+
 
     const handleAddTouristSpot = e => {
         e.preventDefault();
@@ -58,19 +58,19 @@ const AddTourist = () => {
             <Helmet>
                 <title>Add Touris Spot | GoromerAdventure</title>
             </Helmet>
-            <div className="bg-[#F4F3F0] p-24 mb-20">
+            <div className="bg-[#F4F3F0] p-4 md:p-24 mb-20">
                 <h2 className="text-3xl font-extrabold text-center pb-5">Add your tourist spots</h2>
                 <form onSubmit={handleAddTouristSpot}>
                     {/* form name and quantity row */}
                     <div className="flex mb-8">
-                    <div className="md:w-1/2 mr-4">
+                        <div className=" md:w-1/2 mr-4">
                             <label className="form-control">
                                 <div className="label">
                                     <span className="label-text">Country Name :</span>
                                 </div>
                             </label>
                             <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
-                                <option selected>Select Country</option>
+                                <option selected>Select your favorite country</option>
                                 <option value="Bangladesh">Bangladesh</option>
                                 <option value="Thiland">Thiland</option>
                                 <option value="Indonesia">Indonesia</option>
@@ -89,7 +89,7 @@ const AddTourist = () => {
                                 <input type="text" name="spotName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
                             </label>
                         </div>
-                        
+
                     </div>
                     {/* form Supplier and Taste row */}
                     <div className="flex mb-8">

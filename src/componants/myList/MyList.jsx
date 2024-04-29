@@ -78,7 +78,7 @@ const MyList = () => {
                                 <td>{item.average} /<small>$</small></td>
                                 <td>
                                     <Link to={`/update/${item._id}`}>
-                                        <button className="bg-[#33B249] mr-2 text-white rounded p-1">Update</button>
+                                        <button className="bg-[#33B249] mb-1 md:mb-0 mr-2 text-white rounded p-1">Update</button>
                                     </Link>
                                     <button onClick={() => handleDelete(item._id)} className="bg-[#33B249] text-white rounded p-1">Delete</button>
                                 </td>

@@ -56,7 +56,7 @@ console.log(_id)
             <Helmet>
                 <title>Update | GoromerAdventure</title>
             </Helmet>
-            <div className="mb-20">
+            <div className="mb-20 p-5">
                 <h2 className="text-4xl font-extrabold text-center pb-5">Update your tourist spot</h2>
 
                 <form onSubmit={handleAddTouristSpot}>
@@ -69,7 +69,7 @@ console.log(_id)
                                 </div>
                             </label>
                             <select name="countryName" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
-                                <option selected>Select Country</option>
+                                <option selected>Select your favorite country</option>
                                 <option value="Bangladesh">Bangladesh</option>
                                 <option value="Thiland">Thiland</option>
                                 <option value="Indonesia">Indonesia</option>

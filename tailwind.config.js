@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mansalva: "'Mansalva', sans-serif",
+        roboto: "'Roboto', sans-serif",
+        playfair: "'Playfair Display', serif",
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
