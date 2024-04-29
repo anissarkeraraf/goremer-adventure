@@ -53,7 +53,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/myList',
-        element: <PrivateRoute><MyList></MyList></PrivateRoute>
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
       {
         path: '/spot/:id',
