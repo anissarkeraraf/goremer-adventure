@@ -68,10 +68,10 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
-        path: '/subcategory/:country_Name',
+        path: '/subcategory/:countryName',
         element: <PrivateRoute><Subcategory></Subcategory></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/country/${params.country_Name}`)
-      }
+        loader: ({ params }) => fetch(`http://localhost:5000/country/${params.countryName}`)
+      },
     ]
   },
 ]);
