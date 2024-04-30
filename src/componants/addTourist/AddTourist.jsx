@@ -29,7 +29,7 @@ const AddTourist = () => {
         const touristSpots = { spotName, countryName, location, description, average, seasonality, travel, totalVisitors, email, userName, photoURL };
         console.log(touristSpots);
 
-        fetch('http://localhost:5000/spot', {
+        fetch(' https://assignment-ten-server-ashen-five.vercel.app/spot', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -131,7 +131,7 @@ const AddTourist = () => {
                                 <option value="summer">Summer</option>
                                 <option value="rainy">Rainy Season</option>
                                 <option value="autumn">Autumn</option>
-                                <option value="late-autumn">Late-autumn</option>
+                                <option value="late">Late-autumn</option>
                                 <option value="winter">Winter</option>
                                 <option value="spring">Spring</option>
 

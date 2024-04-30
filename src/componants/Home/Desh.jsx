@@ -7,7 +7,7 @@ const Desh = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/country')
+        fetch(' https://assignment-ten-server-ashen-five.vercel.app/country')
             .then(res => res.json())
             .then(data => {
                 setCountries(data)

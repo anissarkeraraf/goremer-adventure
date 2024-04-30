@@ -30,7 +30,7 @@ console.log(_id)
         const updateSpots = { spotName, countryName, location, description, average, seasonality, travel, totalVisitors, photoURL };
         console.log(updateSpots);
 
-        fetch(`http://localhost:5000/spots/${_id}`, {
+        fetch(` https://assignment-ten-server-ashen-five.vercel.app/spots/${_id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"
@@ -130,7 +130,7 @@ console.log(_id)
                                 <option value="summer">Summer</option>
                                 <option value="rainy-season">Rainy Season</option>
                                 <option value="autumn">Autumn</option>
-                                <option value="late-autumn">Late-autumn</option>
+                                <option value="L-autumn">Late-autumn</option>
                                 <option value="winter">Winter</option>
                                 <option value="spring">Spring</option>
 

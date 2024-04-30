@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://assignment-ten-server-ashen-five.vercel.app/spot')
       },
       {
         path: '/about',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: '/touristSpot',
         element: <AllTouristSpot></AllTouristSpot>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://assignment-ten-server-ashen-five.vercel.app/spot')
       },
       {
         path: '/addTourist',
@@ -65,22 +65,22 @@ const router = createBrowserRouter([
       {
         path: '/myList',
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://assignment-ten-server-ashen-five.vercel.app/spot')
       },
       {
         path: '/spot/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://assignment-ten-server-ashen-five.vercel.app/spot')
       },
       {
         path: '/update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-ten-server-ashen-five.vercel.app/spots/${params.id}`)
       },
       {
         path: '/subcategory/:countryName',
         element: <PrivateRoute><Subcategory></Subcategory></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/country/${params.countryName}`)
+        loader: ({ params }) => fetch(`https://assignment-ten-server-ashen-five.vercel.app/country/${params.countryName}`)
       },
     ]
   },
