@@ -20,6 +20,8 @@ import Details from './componants/details/Details.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Update from './componants/Update/Update.jsx';
 import Subcategory from './componants/subcategory/Subcategory.jsx';
+import AboutUs from './componants/About/AboutUs.jsx';
+import Contact from './componants/contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/spot')
+      },
+      {
+        path: '/about',
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       },
       {
         path: '/login',

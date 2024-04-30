@@ -21,32 +21,44 @@ const Navber = () => {
 
     const navLink = <>
         <li className="ml-4"><NavLink to='/'
-           style={({ isActive }) => {
-            return isActive ? { color: "orange" } : {};
+            style={({ isActive }) => {
+                return isActive ? { color: "orange" } : {};
             }}
         >Home</NavLink></li>
 
         <li className="ml-4"><NavLink to='/touristSpot'
-           style={({ isActive }) => {
-            return isActive ? { color: "orange" } : {};
+            style={({ isActive }) => {
+                return isActive ? { color: "orange" } : {};
             }}
         > All Tourists Spot</NavLink></li>
 
         {
             user && <>
                 <li className="ml-4"><NavLink to='/addTourist'
-                   style={({ isActive }) => {
-                    return isActive ? { color: "orange" } : {};
+                    style={({ isActive }) => {
+                        return isActive ? { color: "orange" } : {};
                     }}
                 > Add Tourists Spot</NavLink></li>
 
                 <li className="ml-4"><NavLink to='/myList'
-                   style={({ isActive }) => {
-                    return isActive ? { color: "orange" } : {};
+                    style={({ isActive }) => {
+                        return isActive ? { color: "orange" } : {};
                     }}
                 >My List</NavLink></li>
             </>
         }
+
+        <li className="ml-4"><NavLink to='/about'
+            style={({ isActive }) => {
+                return isActive ? { color: "orange" } : {};
+            }}
+        > About Us</NavLink></li>
+
+        <li className="ml-4"><NavLink to='/contact'
+            style={({ isActive }) => {
+                return isActive ? { color: "orange" } : {};
+            }}
+        > Contact Us</NavLink></li>
     </>
 
     return (
@@ -60,7 +72,9 @@ const Navber = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">GoromKalerAdventure</a>
+                <a className="btn btn-ghost text-xl">
+                    Gorom<span className="text-[#F7B016]">Kaler</span>Adventure
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -79,10 +93,10 @@ const Navber = () => {
                     user ?
                         <button onClick={handleSignOut} className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Log Out</button>
                         :
-                       <>
-                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500 mr-4">Login</button></Link>
-                        <Link to='/register'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Register</button></Link>
-                       </>
+                        <>
+                            <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500 mr-4">Login</button></Link>
+                            <Link to='/register'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Register</button></Link>
+                        </>
                 }
             </div>
         </div>
