@@ -19,6 +19,7 @@ import NotFoundPage from './componants/NotFound/NotFoundPage.jsx';
 import Details from './componants/details/Details.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Update from './componants/Update/Update.jsx';
+import Subcategory from './componants/subcategory/Subcategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
         path: '/update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
+      },
+      {
+        path: '/subcategory/:country_Name',
+        element: <PrivateRoute><Subcategory></Subcategory></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/country/${params.country_Name}`)
       }
     ]
   },

@@ -37,10 +37,10 @@ const Header = () => {
                     <a href="#slide1" className="text-4xl text-white">❯</a>
                 </div>
             </div>
-            <div className="absolute rounded-xl bg-white opacity-70 left-[90px] md:left-[135px] lg:left-[350px] mt-[90px] md:mt-0 lg:mt-0 md:bottom-[50px] lg:bottom-[100px] p-2 md:p-4 lg:p-4">
+            <div className="absolute rounded-xl bg-white glass opacity-50 left-[90px] md:left-[135px] lg:left-[350px] mt-[90px] md:mt-0 lg:mt-0 md:bottom-[70px] lg:bottom-[80px] p-2 md:p-4 lg:p-4">
                 <h2 className="text-black font-satisfy text-2xl md:text-5xl lg:text-6xl space-x-2 text-center mb-2">Discover the</h2>
                 <h2 className="text-black md:text-5xl text-2xl lg:text-6xl space-x-4 mb-2">GOROMER ADVENTURE</h2>
-                <h2 className="text-black text-center mb-2">Your best Adventure Deals with nature.</h2>
+                <h2 className="text-black text-center mb-2 font-roboto font-bold">Your best Adventure Deals with nature.</h2>
                 <div className="flex justify-center item-center">
                     <Link to='/touristSpot'>
                         <button className="bg-black text-white p-3 rounded">Explore Now</button>

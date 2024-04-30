@@ -2,11 +2,13 @@ import { useLoaderData } from "react-router-dom";
 import Header from "../Header/Header";
 import TourSpots from "../tourSpots/TourSpots";
 import { useEffect, useState } from "react";
+import Desh from "./Desh";
+
 
 
 const Home = () => {
     const tourist = useLoaderData();
-    console.log(tourist)
+    // console.log(tourist)
 
     const [adventure, setAdventure] = useState([]);
 
@@ -33,7 +35,10 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div className="my-20 divide-y-2 m-10">
+            <div className="mt-10 mx-auto">
+                <Desh></Desh>
+            </div>
+            <div className="my-20 divide-y-2 m-10 mt-20">
                 <div>
                     <p className="text-center font-mansalva text-[#1DC5CE] text-3xl mb-4">Take yourself</p>
                     <h2 className="text-4xl font-medium text-center mb-5">Adventure Ideas</h2>

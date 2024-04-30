@@ -129,7 +129,7 @@ const AddTourist = () => {
                             <select name="seasonality" class=" border p-3 text-gray-900 text-sm rounded-lg  block w-full  bg-[#FFFFFF]">
                                 <option selected>Choose your favorite season</option>
                                 <option value="summer">Summer</option>
-                                <option value="rainy-season">Rainy Season</option>
+                                <option value="rainy">Rainy Season</option>
                                 <option value="autumn">Autumn</option>
                                 <option value="late-autumn">Late-autumn</option>
                                 <option value="winter">Winter</option>

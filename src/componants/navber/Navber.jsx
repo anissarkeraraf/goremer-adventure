@@ -20,18 +20,37 @@ const Navber = () => {
     }
 
     const navLink = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/touristSpot'> All Tourists Spot</NavLink></li>
+        <li className="ml-4"><NavLink to='/'
+           style={({ isActive }) => {
+            return isActive ? { color: "orange" } : {};
+            }}
+        >Home</NavLink></li>
+
+        <li className="ml-4"><NavLink to='/touristSpot'
+           style={({ isActive }) => {
+            return isActive ? { color: "orange" } : {};
+            }}
+        > All Tourists Spot</NavLink></li>
+
         {
             user && <>
-                <li><NavLink to='/addTourist'> Add Tourists Spot</NavLink></li>
-                <li><NavLink to='/myList'>My List</NavLink></li>
+                <li className="ml-4"><NavLink to='/addTourist'
+                   style={({ isActive }) => {
+                    return isActive ? { color: "orange" } : {};
+                    }}
+                > Add Tourists Spot</NavLink></li>
+
+                <li className="ml-4"><NavLink to='/myList'
+                   style={({ isActive }) => {
+                    return isActive ? { color: "orange" } : {};
+                    }}
+                >My List</NavLink></li>
             </>
         }
     </>
 
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto">
+        <div className="navbar bg-base-100 md:w-11/12 lg:w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +79,10 @@ const Navber = () => {
                     user ?
                         <button onClick={handleSignOut} className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Log Out</button>
                         :
-                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Login</button></Link>
+                       <>
+                        <Link to='/login'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500 mr-4">Login</button></Link>
+                        <Link to='/register'><button className="pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#55c2da] text-black hover:bg-[#5783db] duration-500">Register</button></Link>
+                       </>
                 }
             </div>
         </div>
